@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         switchGyro.isOn = false
         switchAccel.isOn = false
         switchMagnet.isOn = false
+        //deviceMotion()
     }
     
     //Gyrometer
@@ -116,12 +117,20 @@ class ViewController: UIViewController {
         if motion.isMagnetometerAvailable{
             motion.startMagnetometerUpdates(to: OperationQueue.current!) { (data, error) in
                 if let magnetData = data {
-                    print(magnetData)
+                    //print(magnetData)
                 }
             }
         }
     }
     
+//    let cm = CMMotionActivityManager()
+//    func deviceMotion(){
+//        cm.startActivityUpdates(to: OperationQueue.current!) { (data) in
+//            if let datas = data {
+//                print(datas)
+//            }
+//        }
+//    }
     
 
 }
